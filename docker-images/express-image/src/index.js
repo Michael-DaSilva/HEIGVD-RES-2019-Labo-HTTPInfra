@@ -4,19 +4,19 @@ var chance = new Chance();
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res){
-    res.send( generateStudents() );
+app.get('/', function(req, res) {
+    res.send(generateStudents());
 });
 
-app.get('/test', function(req,res){
+app.get('/test', function(req,res) {
     res.send("Test");
 });
 
-app.listen(3000, function(){
-    console.log('Accepting HTTP requests on port 3000');
+app.listen(3000, function() {
+    console.log("Accepting HTTP requests on port 3000");
 });
 
-function generateStudents(){
+function generateStudents() {
   var numberOfStudents = chance.integer({
     min: 0,
     max: 10
